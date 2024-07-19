@@ -1,0 +1,37 @@
+.register {
+  background-image: linear-gradient(to bottom, #4f86a9, #c1d5e0);
+  color: white;
+  padding: 10px 40px 20px; /* Adjust padding */
+  text-align: center;
+  height: 70px;
+  
+  
+}
+
+.register h2 {
+  font-size: 28px; /* Increase font size */
+  margin-bottom: 20px;
+}
+
+.register p {
+  margin-bottom: 20px;
+  font-size: 18px; /* Increase font size */
+ 
+}
+
+.register a {
+  color: #7d57ff,;
+}
+
+.register a:hover {
+  color: #7e57ffc2;
+}
+
+.register-button {
+ 
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Increase font size */
+}
+

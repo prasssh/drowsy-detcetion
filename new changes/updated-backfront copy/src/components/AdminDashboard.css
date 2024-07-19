@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #cedfe7; /* Uniform light purple background */
+    color: #333333;
+  }
+  
+  .dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background: #172a5de1; /* Purple background for the sidebar */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #8399c5; /* Lighter purple for hover effect */
+  }
+  
+  .main-content {
+    margin-left: 250px;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #3e4e9150; /* Uniform light purple background */
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .user-profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .user-list-content {
+    background: #94a4c990; /* Slightly darker light purple for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-list-content h2 {
+    margin-top: 0;
+    color: #0a0a0a; /* Dark purple color for section headers */
+  }
+  
+  .user-list-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-list-content li {
+    margin-bottom: 10px;
+  }
+  
+  .user-list-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2d466ee1; /* Purple background for buttons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .user-list-content button:hover {
+    background-color: #6f82a9ba; /* Darker purple for hover effect */
+    color: black;
+  }
+  
+  .sleep-records {
+    background: #94a4c990; /* Slightly darker light purple for contrast */
+    color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sleep-records h2 {
+    margin-top: 0;
+    color: #0a0a0a; /* Dark purple color for section headers */
+  }
+  
+  .records {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .record {
+    background: #6f82a9ba; /* Slightly darker light purple for record */
+    color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .record img {
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: #4f86a9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+    z-index: 1001;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Optional: To match the form label style */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .login-button,
+  .cancel-button,
+  .close-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .login-button {
+    background: #2c3e50;
+    color: white;
+  }
+  
+  .cancel-button,
+  .close-button {
+    background: #bdc3c7;
+  }
+  
+  .edit-profile {
+    width: 461px;
+    height: 500px;
+    max-width: 600px;
+    background: #6f82a9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 41px;
+    margin-top: 50px; /* Adjust for centering */
+    margin-left: auto; /* Center the form horizontally */
+    margin-right: auto; /* Center the form horizontally */
+  }
+  
+  .edit-profile h2 {
+    margin-bottom: 40px;
+    font-size: 35px;
+    color: #1a1a2e;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  .edit-profile .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .edit-profile .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black; /* Dark label color for the form */
+  }
+  
+  .edit-profile .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .edit-profile .form-group input[type="password"] {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .edit-profile .form-group input:focus {
+    outline: none;
+    background-color: #ffffff; /* Solid white on focus */
+  }
+  
+  .edit-profile .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .edit-profile .form-buttons .cancel-button,
+  .edit-profile .form-buttons .save-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .edit-profile .form-buttons .cancel-button {
+    background-color: rgba(139, 0, 0, 0.901); /* Dark red */
+    color: white;
+  }
+  
+  .edit-profile .form-buttons .save-button {
+    background-color: darkgreen; /* Dark green */
+    color: white;
+  }
+  
+  .profile-popup {
+    width: 300px;
+    text-align: left;
+  }
+  
+  .profile-popup p {
+    margin-bottom: 10px;
+  }
+  

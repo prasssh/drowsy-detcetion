@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #cedfe7; /* Uniform light purple background */
+  color: #333333;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #172a5de1; /* Purple background for the sidebar */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.profile h2, .profile p {
+  color: #ffffff;
+}
+
+.menu {
+  flex-grow: 1;
+}
+
+.menu-item {
+  display: block;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #8399c5; /* Lighter purple for hover effect */
+}
+
+.main-content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #3e4e9150; /* Uniform light purple background */
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.profile-details, 
+.sleep-records {
+  background: #94a4c990; /* Slightly darker light purple for contrast */
+  color: #333333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details h2, 
+.sleep-records h2 {
+  margin-top: 0;
+  color: #0a0a0a; /* Dark purple color for section headers */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile-item .label {
+  font-weight: bold;
+  color: #030303; /* Dark purple color for labels */
+}
+
+.profile-item .value {
+  color: #0a0a0a; /* Medium purple color for values */
+}
+
+.records {
+  display: flex;
+  gap: 20px;
+}
+
+.record {
+  background: #6f82a9ba; /* Slightly darker light purple for record */
+  color: #333333;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  box-shadow: 0 2px 4px  #9b59b600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.record img {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.camera-footer {
+  background: #D7BDE2; /* Slightly darker light purple */
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  box-sizing: border-box;
+}
+
+.camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:  #2d466ee1; /* Purple background for buttons */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  background-color:  #6f82a9ba; /* Darker purple for hover effect */
+  color: black;
+}
+
+.camera-preview {
+  margin-top: 20px;
+  border: 1px solid #9B59B6; /* Lighter purple border */
+  border-radius: 8px;
+  width: 640px;
+  height: 480px;
+}
+
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.edit-profile {
+  width: 461px;
+  height: 700px;
+  max-width: 600px;
+  background: #6f82a9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 41px;
+  margin-top: 50px; /* These margins are optional */
+  margin-left: 500px; /* and should be adjusted for centering */
+  position: relative;
+}
+
+
+.edit-profile h2 {
+  margin-bottom: 40px;
+  font-size: 35px;
+  color: #1a1a2e;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black; /* Dark label color for the form */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  color: #333333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.form-group input[type="password"] {
+  font-family: 'Arial', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  background-color: #ffffff; /* Solid white on focus */
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.form-buttons .cancel-button,
+.form-buttons .save-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.form-buttons .cancel-button {
+  background-color: rgba(139, 0, 0, 0.901); /* Dark red */
+  color: white;
+}
+
+.form-buttons .save-button {
+  background-color: darkgreen; /* Dark green */
+  color: white;
+}
